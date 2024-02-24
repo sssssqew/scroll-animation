@@ -6,7 +6,7 @@ body{
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  min-height: 350vh;
+  min-height: 400vh;
 }
 *{
   box-sizing: border-box;
@@ -38,11 +38,18 @@ p{
   transition: 1s ease-in-out;
   /* border: 1px solid red; */
 }
+iframe{
+  opacity: 0; width: 60%; height: 720px; margin-top: 10rem;
+  transition: 1s ease-in-out;
+}
 .item.fade{
   opacity: 1; transform: translateY(0) scale(1); 
 }
 p.fade{
   opacity: 1; transform: translateY(0) scale(1);
+}
+iframe.fade{
+  opacity: 1; width: 70%; height: 800px; margin-top: 8rem; 
 }
 .container .item:nth-child(1){
   background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuIlg9172jMsDMgF9cppzLBbpMwTntLNgniQ&usqp=CAU') no-repeat center;

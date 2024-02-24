@@ -1,6 +1,7 @@
 const container = document.querySelector('.container')
 const items = container.querySelectorAll('.item')
 const text = document.body.querySelector('p')
+const video = document.querySelector('iframe')
 const documentHeight = document.documentElement.clientHeight
 let distFromBottom
 let offset = -100
@@ -19,4 +20,8 @@ window.addEventListener('scroll', (e) => {
       item.classList.add('fade')
     }
   })
+  distFromBottom = documentHeight - video.getBoundingClientRect().bottom
+  if(distFromBottom > offset){
+    video.classList.add('fade')
+  }
 })
